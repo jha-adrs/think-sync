@@ -6,10 +6,13 @@ connectToMongo();
 
 const app = express();
 const port = 3000;
+app.use(express.json());
 
-app.get('/', (req,res)=>{
-    res.send('Hello World!')
-})
+// Available routes
+// TODO: Add unique id for users
+app.use('/api/auth', require('./routes/auth'))
+app.use('/api/notes', require('./routes/notes'))
+
 
 app.listen(port, () => {
     console.log(`Listening at http://localhost:${port}`)
