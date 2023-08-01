@@ -7,8 +7,8 @@ const UserSchema = new Schema({
     // Unique emailensures that no two users can have the same email address
     password: {type:String, required: true},
     date: {type: Date, default: Date.now}
-
     
 });
 
-module.exports = mongoose.model('users', UserSchema);
+const User = mongoose.model('Users',UserSchema);
+module.exports = User;
