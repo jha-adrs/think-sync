@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User')
 const { body, validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const JWT_SECRET = 'HelloThere';
 
 async function findByEmail(email) {
     try {
@@ -12,7 +15,7 @@ async function findByEmail(email) {
     }
 }
 // Create a user Using POST "/api/auth"
-router.post('/', [
+router.post('/createuser', [
     body('name', "Enter a longer name").isLength({ min: 3 }),
     body('email', "Invalid email").isEmail(),
     body('email').custom(async value => {
@@ -33,18 +36,27 @@ router.post('/', [
     })
 
 
-], (req, res) => {
+], async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
     }
-    User.create({
+    // Create the salt
+    // Use await  
+    const salt = await bcrypt.genSalt(10);
+    const secPass = await bcrypt.hash(req.body.password, salt);
+    user = await User.create({
         name: req.body.name,
-        password: req.body.password,
-        email: req.body.email,
-    }).then(user => res.status(200).json({ status: "user created", user: user }))
-        .catch(err => console.log(err));
-    // headers already sent res.send(req.body);
+        password: secPass,
+        email:req.body.email
+    });
+    const data = {
+        user:{
+            id: user.id,
+        }
+    };
+    const authToken = jwt.sign(data, JWT_SECRET);
+    res.json({authToken: authToken});
 });
 
 module.exports = router;
