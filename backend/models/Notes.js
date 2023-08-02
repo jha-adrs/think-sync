@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const NotesSchema = new mongoose.Schema({
     // Acts as a foreign key 
     user:{
-        type:mongoose.Schema.Type.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:'user',
         required :true
     },
