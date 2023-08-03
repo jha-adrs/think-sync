@@ -1,13 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NoteContext from './noteContext';
 
-const NoteState = (props)=>{
-    const state = {
+const NoteState = (props) => {
+    const s1 = {
         "name": "Aadarsh",
-        "Age":20
+        "age": 20
     };
-    return(
-        <NoteContext.Provider value= {state}>
+    const [state, setState] = useState(s1);
+    // Example of constantly changing value
+    /**
+     * useState(()=>{
+        const interval = setInterval(() =>{
+            setState((prevState)=>({
+                ...prevState,
+                age: prevState.age+1,
+            }));
+        },2000);
+
+        return () => clearInterval(interval);
+    },[]);
+     */
+    
+    
+    return (
+        <NoteContext.Provider value={{ state }}>
             {props.children}
         </NoteContext.Provider>
     )
