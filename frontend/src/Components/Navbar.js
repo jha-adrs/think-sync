@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../logo.svg'
@@ -6,9 +7,9 @@ function Navbar() {
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <Link class="navbar-brand" to="/">
+                    <Link class="navbar-brand" href="#" to="/">
                     <img src={logo} alt="" width="30" height="30" class="d-inline-block align-text-top"/>
-                    <a class="navbar-brand mx-3 " href="/">Default</a>
+                    <a class="navbar-brand mx-3 " to="/">ThinkSync</a>
                         </Link>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -16,24 +17,24 @@ function Navbar() {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+                                <Link class="nav-link active" aria-current="page" href="#" to="/">Home</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to="/">Link</Link>
+                                <Link class="nav-link" href="#" to="/about">About</Link>
                             </li>
                             <li class="nav-item dropdown">
-                                <Link class="nav-link dropdown-toggle" to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link class="nav-link dropdown-toggle" href="#" to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown
                                 </Link>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" to="#">Action</a></li>
-                                    <li><a class="dropdown-item" to="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#" to="/">Action</a></li>
+                                    <li><a class="dropdown-item"  href="#" to="/">Another action</a></li>
                                     <li><hr class="dropdown-divider" /></li>
-                                    <li><a class="dropdown-item" to="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#" to="/">Something else here</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled" to="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                <a class="nav-link disabled" href="#" to="/" tabindex="-1" aria-disabled="true">Disabled</a>
                             </li>
                         </ul>
                         <form class="d-flex">
