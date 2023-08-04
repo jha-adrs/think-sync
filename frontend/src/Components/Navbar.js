@@ -11,7 +11,7 @@ function Navbar() {
     }, [location]);
     return (
         <div>
-            <nav className="navbar navbar-expand-lg justify-content-center topnav">
+            <nav className="navbar navbar-expand-lg fixed-top justify-content-center topnav">
                 <div className="container-fluid">
                     <div className="navbar-brand">
                         <img src={logo} alt="" width="50" height="50" className="d-inline-block align-text-center" id="brandlogo" />
@@ -22,7 +22,7 @@ function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <div className="container-fluid middleitems">
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0 settransparent">
                                 <li className="nav-item">
                                     <Link className={`nav-link ${location.pathname === '/' ? "active" : ""}`} aria-current="page" href="#" to="/" id="navbaritem2">Home</Link>
                                 </li>
