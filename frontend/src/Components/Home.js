@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import logo from '../logo.svg'
+import {Link} from 'react-router-dom';
 import './Home.css'
 const Home = () => {
   return (
@@ -14,14 +15,14 @@ const Home = () => {
             </div>
           </div>
           <div className="text-center">
-            <a href="#about" className="btn btn-outline-success btn-get-started ">Get Started</a>
+            <Link href="#/" to="/login" className="btn btn-outline-success btn-get-started ">Get Started</Link>
           </div>
 
           <div className="row icon-boxes">
             <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
               <div className="icon-box">
                 <div className="icon"><i className="ri-stack-line"></i></div>
-                <h4 className="title"><a href="">Free</a></h4>
+                <h4 className="title"><a href="#/" to="/">Free</a></h4>
                 <p className="description">Get started with cloud-synced notes for free and quick 👌 </p>
               </div>
             </div>

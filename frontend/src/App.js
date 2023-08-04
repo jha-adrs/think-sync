@@ -7,6 +7,7 @@ import {
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import About from './Components/About';
+import Login from './Components/Login';
 import NoteState from './context/notes/NoteState';
 // So wrapping the whole thing in NoteState enables allt he nested components to access the states
 
@@ -19,6 +20,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route exact path='/' element={<Home />} />
+            <Route exact path='/login' element={<Login />} />
             <Route exact path='/about' element={<About />} />
           </Routes>
         </BrowserRouter>

@@ -1,15 +1,17 @@
+nav{
+    background-color: transparent;
+}
 #navbaritem {
     margin-top: 15px;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    background-color: transparent;
+    color: #000000;
     font-size: 1.75rem;
     font-weight: 600;
     font-family: 'Space Grotesk', sans-serif;
-
 }
 
 #navbaritem2 {
-    background-color: #ffffff;
+    background-color: transparent;
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
     font-weight: 500;
@@ -19,7 +21,7 @@
 
 #navbaritem3,
 .dropdown-item {
-    background-color: #ffffff;
+    background-color: transparent;
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
     font-weight: 300;
@@ -31,16 +33,10 @@
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 300;
     font-size: 1rem;
-}
-#navbaritem1:hover,
-#navbaritem2:hover,
-#navbaritem3:hover,
-#navbarDropdown:hover {
-    color: #198754;
-    /* Color to be applied on hover */
+    background-color: transparent;
 }
 
-#brandlogo {}
+
 
 .middleitems {
     display: flex;
@@ -48,19 +44,15 @@
     align-items: center;
     height: 100%;
     padding-left: 20%;
-    background-color: #19875400;
+    background-color: transparent;
 }
-.settransparent{
-    
-    background-color: #19875400;
-}
+
 .dropdown-toggle {
-    background-color: #ffffff;
+    background-color: transparent;
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
     font-weight: 500;
     font-family: 'Space Grotesk', sans-serif;
-    
     justify-content: center;
 }
 
@@ -70,4 +62,22 @@
 
 .buttontext{
     font-family: 'Space Grotesk', sans-serif;
+    background-color: transparent;
+    
+}
+
+#navbaritem1:hover,
+#navbaritem2:hover,
+#navbaritem3:hover,
+#navbarDropdown:hover {
+  color: #198754;
+  /* Color to be applied on hover */
+}
+.custom-btn{
+     border-width: 0px; 
+     color: #198754;;
+}
+.custom-btn:hover{
+    border-width: 0px; 
+    color: #ffffff;
 }
