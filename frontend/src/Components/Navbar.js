@@ -34,8 +34,8 @@ function Navbar() {
                                         Features
                                     </Link>
                                     <ul className="dropdown-menu" id="navbarDropdown" aria-labelledby="navbarDropdown">
-                                        <li><a className="dropdown-item" id="navbarDropdown" href="#" to="/">Cloud Synced</a></li>
-                                        <li><a className="dropdown-item" id="navbarDropdown" href="#" to="/">Safe</a></li>
+                                        <li><a className="dropdown-item"  href="#" to="/"><span className="navbarDropdown">Cloud Synced</span></a></li>
+                                        <li><a className="dropdown-item"  href="#" to="/"><span className="navbarDropdown">Cloud Safe</span></a></li>
 
                                     </ul>
                                 </li>
@@ -44,13 +44,10 @@ function Navbar() {
                                 </li>
                             </ul>
                         </div>
-
-                        <span>
-                            <button className={`btn buttonn first nav-link `} type= 'button'>
-                            Login 
-                            {/*<img src={pencil} alt="" width="150" height="50" className="d-inline-block align-text-center" id="brandlogo" />*/}
-                        </button>
-                    </span>
+                       <div>
+                       <button class="btn btn-outline-success btn-lg custom-btn btn-8"><span className='buttontext'>Login&rarr;</span></button>
+                       </div>
+                        
 
                     {/*
                         <div className="logging">
