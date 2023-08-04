@@ -15,7 +15,7 @@ const Home = () => {
             </div>
           </div>
           <div className="text-center">
-            <Link href="#/" to="/login" className="btn btn-outline-success btn-get-started ">Get Started</Link>
+            <Link href="#/" to="/signup" className="btn btn-outline-success btn-get-started ">Get Started</Link>
           </div>
 
           <div className="row icon-boxes">

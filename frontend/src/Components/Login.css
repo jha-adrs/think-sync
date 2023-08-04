@@ -1,3 +1,9 @@
+h2{
+    background: -webkit-radial-gradient(circle rgb(1, 110, 218), rgb(250, 0, 167));
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
 .bg-image{
     background-image: url('../assets/loginbg.png');
     background-size: cover;
@@ -21,4 +27,12 @@
 
 .btntext{
     color: aliceblue;
+}
+.gradient-custom-4{
+    color: rgba(var(--text-color));
+  border: 4px double transparent;
+      background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  width: 12rem;
 }
