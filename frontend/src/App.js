@@ -1,18 +1,18 @@
-import './App.css';
+import './components/styles/App.css';
 import React,{useEffect,useContext} from 'react';
 import {
   BrowserRouter,
   Route,
   Routes
 } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import Home from './Components/Home';
-import About from './Components/About';
-import Login from './Components/Login';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Login from './components/Login';
 import NoteState from './context/notes/NoteState';
-import Signup from './Components/Signup';
-import UserHome from './Components/UserHome';
-import UserNav from './Components/UserNav';
+import Signup from './components/Signup';
+import UserHome from './components/UserHome';
+import UserNav from './components/UserNav';
 // So wrapping the whole thing in NoteState enables allt he nested components to access the states
 
 function App() {

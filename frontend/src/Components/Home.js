@@ -2,7 +2,7 @@
 import React from 'react'
 import logo from '../logo.svg'
 import {Link} from 'react-router-dom';
-import './Home.css'
+import './styles/Home.css'
 const Home = () => {
   return (
     <div>
