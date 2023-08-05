@@ -12,8 +12,8 @@ function Login() {
                                 <div className="card" style={{ borderRadius: "15px" }}>
 
                                     <div className="card-body p-3">
-                                        <h2 className=" text-center mb-5">Welcome back!</h2>
-
+                                        <h2 className=" text-center mb-5 authheadline">Welcome back!</h2>
+                        
                                         <form>
 
                                             <div className="form-outline mb-4">

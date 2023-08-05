@@ -46,6 +46,14 @@ nav{
     padding-left: 20%;
     background-color: transparent;
 }
+.middleitemsuser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-left: 25%;
+    background-color: transparent;
+}
 
 .dropdown-toggle {
     background-color: transparent;

@@ -10,8 +10,8 @@ const Home = () => {
         <div className="container position-relative" data-aos="fade-up" data-aos-delay="100">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-9 text-center">
-              <h1>Your thoughts, in the cloud</h1>
-              <h2>Note taking with the cloud</h2>
+              <h1 className='punchline'>Your thoughts, in the cloud</h1>
+              <h2 style={{color:"#000000"}}>Note taking with the cloud</h2>
             </div>
           </div>
           <div className="text-center">

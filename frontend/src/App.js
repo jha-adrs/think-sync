@@ -1,4 +1,5 @@
 import './App.css';
+import React,{useEffect,useContext} from 'react';
 import {
   BrowserRouter,
   Route,
@@ -10,19 +11,32 @@ import About from './Components/About';
 import Login from './Components/Login';
 import NoteState from './context/notes/NoteState';
 import Signup from './Components/Signup';
+import UserHome from './Components/UserHome';
+import UserNav from './Components/UserNav';
 // So wrapping the whole thing in NoteState enables allt he nested components to access the states
 
 function App() {
+  let isAuthenticated = true;
+  useEffect(() => {
+    if (localStorage.getItem('authToken')) {
+      isAuthenticated = true;
+    }
+    else {
+      isAuthenticated = false;
+    }
+  }, [])
   return (
 
     <>
       <NoteState>
         <BrowserRouter>
-          <Navbar />
+          {(isAuthenticated)?<UserNav/>:<Navbar/>}
           <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route exact path='/login' element={<Login />} />
-            <Route exact path='/signup' element={<Signup />} />
+            <Route exact path='/' element={(isAuthenticated)?<UserHome/>:<Home />} />
+            <Route exact path='/login' element={(isAuthenticated)?<UserHome/>:<Login />} />
+            <Route exact path='/signup' element={(isAuthenticated)?<UserHome/>:<Signup />} />
+            <Route exact path='/about' element={<About />} />
+      
             <Route exact path='/about' element={<About />} />
           </Routes>
         </BrowserRouter>

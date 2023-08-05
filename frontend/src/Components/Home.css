@@ -2,10 +2,8 @@
 # Hero Section
 --------------------------------------------------------------*/
 h1 {
-  font-size: 72px;
-  background: -webkit-linear-gradient(90deg, rgb(237, 13, 88) 0%, rgb(170, 5, 241) 25%, rgb(16, 4, 240) 75%, rgb(2, 100, 247) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 100px;
+  
 }
 #hero {
     width: 100%;

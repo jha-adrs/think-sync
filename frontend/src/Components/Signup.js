@@ -12,7 +12,7 @@ function Signup() {
                                 <div className="card" style={{ borderRadius: "15px" }}>
 
                                     <div className="card-body p-3">
-                                        <h2 className=" text-center mb-5">Signup&#33; and let's begin</h2>
+                                        <h2 className=" text-center mb-5 authheadline">Signup&#33; and let's begin</h2>
 
                                         <form>
 

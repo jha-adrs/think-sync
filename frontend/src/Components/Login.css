@@ -1,9 +1,12 @@
-h2{
-    background: -webkit-radial-gradient(circle rgb(1, 110, 218), rgb(250, 0, 167));
+.authheadline {
+    /* Gradient for WebKit-based browsers */
+    background: -webkit-radial-gradient(circle, rgb(1, 110, 218), rgb(250, 0, 167));
+    /* Standard gradient for modern browsers */
+    background: radial-gradient(circle, rgb(1, 110, 218), rgb(250, 0, 167));
     -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-}
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
 .bg-image{
     background-image: url('../assets/loginbg.png');
     background-size: cover;
