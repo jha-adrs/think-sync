@@ -1,5 +1,6 @@
-nav{
+.navbar{
     background-color: transparent;
+    padding-top: 0;
 }
 #navbaritem {
     margin-top: 15px;
@@ -83,9 +84,13 @@ nav{
 }
 .custom-btn{
      border-width: 0px; 
-     color: #198754;;
+     color: #198754;
 }
-.custom-btn:hover{
+.buttontextuser{
+    border-width: 1px; 
+     color: #d70a17;
+}
+.custom-btn:hover, .buttontextuser:hover{
     border-width: 0px; 
     color: #ffffff;
 }

@@ -1,12 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import logo from '../logo.svg'
+import NoteContext from '../context/notes/noteContext';
 import './styles/Navbar.css';
 const UserNav = () => {
     let location = useLocation(); //returns an object
     useEffect(() => {
 
     }, [location]);
+    const { auth, setAuth } = useContext(NoteContext);
+
+    const handleLogout = () => {
+        setAuth(false);
+        localStorage.removeItem('authToken');
+        window.location.reload();
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg fixed-top justify-content-center topnav">
@@ -32,13 +40,14 @@ const UserNav = () => {
                                     <Link className={`nav-link ${location.pathname === '/premium' ? "active" : ""}`} href="#" to="/about" id="navbaritem2">Go Premium</Link>
                                 </li>
                             </ul>
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search your notes" aria-label="Search" />
-                                <Link href="#/" to='/logout'>
-                                    <button class="btn btn-outline-success btn-lg custom-btn btn-8"><span className='buttontext' style={{ color: `${location.pathname === '/login' ? '#000000' : ''}` }}
+                            <form className="d-flex">
+                                <input className="form-control me-2" type="search" placeholder="Search your notes" aria-label="Search" />
+                                
+                            </form>
+                            <Link href="#/" to='/logout'>
+                                    <button className="btn btn-outline-danger btn-lg buttontextuser btn-8" onClick={handleLogout}><span className='' style={{ color: `${location.pathname === '/login' ? '#000000' : ''}` }}
                                     >Logout</span></button>
                                 </Link>
-                            </form>
                         </div>
                         <div>
 

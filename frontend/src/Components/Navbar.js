@@ -46,7 +46,7 @@ function Navbar() {
                         </div>
                        <div>
                         <Link href="#/" to='/login'>
-                        <button class="btn btn-outline-success btn-lg custom-btn btn-8"><span className='buttontext' style={{ color: `${location.pathname === '/login' ? '#000000' : ''}` }}
+                        <button className="btn btn-outline-success btn-lg custom-btn btn-8"><span className='buttontext' style={{ color: `${location.pathname === '/login' ? '#000000' : ''}` }}
  >Login&rarr;</span></button>
                        
                         </Link>

@@ -24,7 +24,7 @@ function Login() {
 
                                             <div className="form-outline mb-4">
                                                 <label className="form-label" for="form3Example4cg">Password</label>
-                                                <input type="password" id="form3Example4cg" className="form-control form-control-lg" placeholder='Enter a password' />
+                                                <input type="password" id="form3Example4cg" className="form-control form-control-lg" placeholder='Enter your password' />
 
                                             </div>
 

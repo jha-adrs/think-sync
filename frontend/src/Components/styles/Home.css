@@ -175,3 +175,22 @@ h1 {
     font-size: 14px;
     color: #919191;
   }
+
+  .floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    font-size: 40px;
+    background-color: #007bff00;
+    color: #000000;
+    border: 2px;
+    border-color: black;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .floating-button:hover {
+    background-color: #ae9f9f32;
+  }
